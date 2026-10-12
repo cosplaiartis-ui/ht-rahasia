@@ -1,0 +1,15 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>HT Rahasia</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#111">
+<style>body{margin:0;font-family:system-ui;background:#111;color:#eee;display:flex;flex-direction:column;align-items:center;min-height:100vh;user-select:none;-webkit-user-select:none}
+input,button{font-size:18px;padding:12px;border-radius:10px;border:0;margin:6px 0;width:100%;box-sizing:border-box}
+#join,#radio{width:min(92vw,420px);margin-top:24px}#radio{display:none;text-align:center}
+#ptt{width:min(70vw,280px);height:min(70vw,280px);border-radius:50%;background:#2a7;color:#fff;font-size:26px;font-weight:bold;margin:30px auto;display:block;touch-action:none;box-shadow:0 0 0 8px #1a4}
+#ptt.tx{background:#d33;box-shadow:0 0 0 14px #a22}#ptt.busy{background:#666;box-shadow:0 0 0 8px #444}
+#st{font-size:20px;min-height:28px}.s{color:#9a9;font-size:14px}</style></head><body>
+<h2>📻 HT Rahasia</h2>
+<div id="join"><input id="room" placeholder="Nama channel"><input id="pass" type="password" placeholder="Kata sandi rahasia (bersama)">
+<input id="name" placeholder="Nama panggilan"><button id="go" style="background:#2a7;color:#fff">Masuk Channel</button>
+<p class="s">Kunci enkripsi dibuat di perangkat dari kata sandi. Server hanya meneruskan data terenkripsi (AES-GCM) dan tidak tahu kata sandi maupun nama channel.</p></div>
+<div id="radio"><div class="s" id="info"></div><div id="st">Siaga</div><button id="ptt">TAHAN<br>UNTUK BICARA</button>
+<div class="s">Atau tahan tombol <b>Spasi</b> di keyboard</div><button id="out" style="background:#333;color:#ccc">Keluar</button></div>
+<script src="https://unpkg.com/mqtt@5/dist/mqtt.min.js"></script><script src="crypto.js"></script><script src="app.js"></script></body></html>
